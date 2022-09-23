@@ -1,33 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-class SelectedMusic extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { selected: "No music selected" };
-  }
-
-  musicList = [
+function SelectMusic() {
+  const [selected, setSelected] = useState("No music selected");
+  const musicList = [
     "Dream House Vol 1 & 2",
     "Dream House Vol 3",
     "Planet Love Vol 1",
     "Planet Love Vol 2",
   ];
 
-  selectMusic = () => {
-    this.setState({
-      selected:
-        this.musicList[Math.floor(Math.random() * this.musicList.length)],
-    });
+  const selectMusic = () => {
+    setSelected(musicList[Math.floor(Math.random() * musicList.length)]);
   };
 
-  render() {
-    return (
-      <div>
-        <button onClick={this.selectMusic}>Select Some Music</button>
-        <p>{this.state.selected}</p>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <button onClick={selectMusic}>Select Some Music</button>
+      <p>{selected}</p>
+    </div>
+  );
 }
 
-export default SelectedMusic;
+export default SelectMusic;
