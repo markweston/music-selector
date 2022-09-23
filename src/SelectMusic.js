@@ -17,7 +17,7 @@ function SelectMusic() {
     <div>
       <button onClick={selectMusic}>Select Some Music</button>
       <p>
-        {selected.artist
+        {selected.artist //could be a better way of doing this, like checking whether seletcted is a object
           ? `Artist: ${selected.artist}, Title: ${selected.title}`
           : selected}
       </p>
