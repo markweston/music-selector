@@ -5,7 +5,7 @@ import SelectMusic from "./SelectMusic";
 function App() {
   return (
     <div className="music-selector">
-      <a href="http://www.last.fm/api/auth/?api_key=1af931d4ae450156c121bc0b8db3f973&cb=https://music-selector-47maoj40t-markweston.vercel.app">
+      <a href="http://www.last.fm/api/auth/?api_key=1af931d4ae450156c121bc0b8db3f973&cb=https://music-selector-g05b14lhd-markweston.vercel.app">
         Allow Access
       </a>
       <header>
